@@ -1,0 +1,6 @@
+{
+  "Name": "InvoiceProcessing_REFramework",
+  "ProjectType": "Process",
+  "Description": "Getting Invoices from gmail, extract details from invoices and store in queue.",
+  "MainFile": "Main.xaml"
+}
