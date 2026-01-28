@@ -185,7 +185,7 @@
       <AssemblyReference>UiPath.System.Activities.Api</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1207,4002" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1207,4338" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="DigitalText" />
       <Variable x:TypeArguments="p5:Document" Name="DOM" />
@@ -198,7 +198,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="556,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Sequence sap:VirtualizedContainerService.HintSize="556,3647" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="556,3983" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Var_PDFText" />
         <Variable x:TypeArguments="x:String" Name="InvoiceNumber" />
@@ -274,13 +274,13 @@
           <InArgument x:TypeArguments="s:String[]">[System.IO.Directory.GetFiles(in_Var_LocalPath+in_Config("AttachmentPath").ToString,"*.pdf")]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CurrentIndex]" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="522,2113" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[DocPath]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CurrentIndex]" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="522,2449" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[DocPath]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentFile" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,1982" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,2318" sap2010:WorkflowViewState.IdRef="Sequence_30">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="extractionSuccess" />
               </Sequence.Variables>
@@ -289,7 +289,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,1810" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486,2146" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -870,7 +870,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,238" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,574" sap2010:WorkflowViewState.IdRef="Sequence_34">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -892,7 +892,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:AddDataRow>
-                        <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[in_Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,in_Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{ExceptionSource}&quot;,exception.Source).Replace(&quot;{ExceptionMessage}&quot;,exception.Message).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the file.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)).Replace(&quot;{TransactionItem}&quot;,Path.GetFileName(currentFile))]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email - BRE mail" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[in_Config(&quot;BREMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,in_Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{completed time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy hh:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,in_Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
+                        <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[in_Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,in_Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{ExceptionSource}&quot;,exception.Source).Replace(&quot;{ExceptionMessage}&quot;,exception.Message).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the file.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)).Replace(&quot;{TransactionItem}&quot;,Path.GetFileName(currentFile))]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email - BRE mail" sap:VirtualizedContainerService.HintSize="450,388" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[in_Config(&quot;BREMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,in_Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{completed time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,in_Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
                           <uga:SendEmailConnections.AttachmentsBackup>
                             <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                               <usau:BackupSlot.BackupValues>
@@ -914,7 +914,7 @@
                           </uga:SendEmailConnections.InputTypeBackup>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
