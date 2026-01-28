@@ -185,7 +185,7 @@
       <AssemblyReference>UiPath.System.Activities.Api</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1207,3998" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1207,4002" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="DigitalText" />
       <Variable x:TypeArguments="p5:Document" Name="DOM" />
@@ -198,7 +198,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="556,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <Sequence sap:VirtualizedContainerService.HintSize="556,3643" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap:VirtualizedContainerService.HintSize="556,3647" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Var_PDFText" />
         <Variable x:TypeArguments="x:String" Name="InvoiceNumber" />
@@ -243,13 +243,19 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uga:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowseFolderPath="SMS" BrowserFolderLabelId="Label_1" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Move Email" Email="[in_TransactionItem]" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="416,242" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_1" UseConnectionService="True">
+            <uga:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowseFolderPath="UiPath/Error" BrowserFolderLabelId="Label_9049738999243433350" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Move Email" Email="[in_TransactionItem]" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="416,242" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_1" UseConnectionService="True">
               <uga:MoveEmailConnections.Folder>
-                <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_1" BrowserFolderName="SMS" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
+                <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_9049738999243433350" BrowserFolderName="UiPath/Error" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
                   <ugagm:FolderArgument.Backup>
                     <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID0" StoredValue="Browse">
                       <usau:BackupSlot.BackupValues>
-                        <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+                        <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                          <InArgument x:TypeArguments="x:String">UiPath/Error</InArgument>
+                          <x:String>Label_9049738999243433350</x:String>
+                        </scg:List>
+                        <scg:List x:TypeArguments="x:Object" x:Key="EnterPath" Capacity="1">
+                          <x:Null />
+                        </scg:List>
                       </usau:BackupSlot.BackupValues>
                     </usau:BackupSlot>
                   </ugagm:FolderArgument.Backup>
@@ -268,13 +274,13 @@
           <InArgument x:TypeArguments="s:String[]">[System.IO.Directory.GetFiles(in_Var_LocalPath+in_Config("AttachmentPath").ToString,"*.pdf")]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CurrentIndex]" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="522,2109" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[DocPath]">
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[CurrentIndex]" DisplayName="For Each currentFile" sap:VirtualizedContainerService.HintSize="522,2113" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[DocPath]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="x:String">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:String" Name="currentFile" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,1978" sap2010:WorkflowViewState.IdRef="Sequence_30">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,1982" sap2010:WorkflowViewState.IdRef="Sequence_30">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="extractionSuccess" />
               </Sequence.Variables>
@@ -935,7 +941,7 @@
                   </Sequence>
                 </TryCatch.Finally>
               </TryCatch>
-              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="486,104" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[in_AttachmentPath + &quot;\&quot; + Path.GetFileName(currentFile)]" />
+              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="486,108" sap2010:WorkflowViewState.IdRef="DeleteFileX_1" Path="[in_AttachmentPath + &quot;\&quot; + Path.GetFileName(currentFile)]" />
             </Sequence>
           </ActivityAction>
         </ui:ForEach.Body>
@@ -946,13 +952,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
-      <uga:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID2}" ManualFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowseFolderPath="SMS" BrowserFolderLabelId="Label_1" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Move Email" Email="[in_TransactionItem]" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="522,229" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_2" UseConnectionService="True">
+      <uga:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID2}" ManualFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowseFolderPath="UiPath/Processed" BrowserFolderLabelId="Label_5921794693357651723" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Move Email" Email="[in_TransactionItem]" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="522,229" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_2" UseConnectionService="True">
         <uga:MoveEmailConnections.Folder>
-          <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_1" BrowserFolderName="SMS" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
+          <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_5921794693357651723" BrowserFolderName="UiPath/Processed" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
             <ugagm:FolderArgument.Backup>
               <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID2" StoredValue="Browse">
                 <usau:BackupSlot.BackupValues>
-                  <scg:Dictionary x:TypeArguments="ugage:FolderInputMode, scg:List(x:Object)" />
+                  <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                    <InArgument x:TypeArguments="x:String">UiPath/Processed</InArgument>
+                    <x:String>Label_5921794693357651723</x:String>
+                  </scg:List>
+                  <scg:List x:TypeArguments="x:Object" x:Key="EnterPath" Capacity="1">
+                    <x:Null />
+                  </scg:List>
                 </usau:BackupSlot.BackupValues>
               </usau:BackupSlot>
             </ugagm:FolderArgument.Backup>
