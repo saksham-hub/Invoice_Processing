@@ -341,9 +341,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="240,192" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="498,3331" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="452,2845" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="452,2833" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -468,7 +468,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="450,917" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="450,913" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -510,7 +510,7 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </uga:SendEmailConnections>
-                          <TryCatch DisplayName="Try Catch SetTransactionStatus (SE)" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="TryCatch_12">
+                          <TryCatch DisplayName="Try Catch SetTransactionStatus (SE)" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="TryCatch_12">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -584,13 +584,13 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1168" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1160" sap2010:WorkflowViewState.IdRef="Sequence_92">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="Assign_34">
+                          <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_34">
                             <Assign.To>
                               <OutArgument x:TypeArguments="ui:BusinessRuleException">[BusinessException]</OutArgument>
                             </Assign.To>
@@ -599,7 +599,7 @@
                             </Assign.Value>
                           </Assign>
                           <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{TransactionItem.FromAddress,TransactionItem.Subject,&quot;&quot;,&quot;Failed&quot;,BusinessException.Message}]" DataTable="[dt_StatusReport]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
-                          <uga:ReplyToEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" Attachments="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="UseExisting" AttachmentPaths="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString()).Replace(&quot;{ExceptionMessage}&quot;,BusinessException.Message).Replace(&quot;{TransactionItem}&quot;,String.Join(&quot;, &quot;, TransactionItem.AttachmentsNamesList)).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the mail.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" Cc="{x:Null}" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" ContinueOnError="{x:Null}" DisplayName="Reply to Email" Email="[TransactionItem]" sap:VirtualizedContainerService.HintSize="416,345" sap2010:WorkflowViewState.IdRef="ReplyToEmailConnections_1" Importance="Normal" NewSubject="{x:Null}" ReplyToAll="True" SaveAsDraft="True" SingleAttachment="{x:Null}" To="{x:Null}" UseConnectionService="True">
+                          <uga:ReplyToEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" NewSubject="{x:Null}" SingleAttachment="{x:Null}" To="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString()).Replace(&quot;{ExceptionMessage}&quot;,BusinessException.Message).Replace(&quot;{TransactionItem}&quot;,String.Join(&quot;, &quot;, TransactionItem.AttachmentsNamesList)).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the mail.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Reply to Email" Email="[TransactionItem]" sap:VirtualizedContainerService.HintSize="416,345" sap2010:WorkflowViewState.IdRef="ReplyToEmailConnections_1" Importance="Normal" ReplyToAll="True" SaveAsDraft="True" UseConnectionService="True">
                             <uga:ReplyToEmailConnections.AttachmentsBackup>
                               <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                                 <usau:BackupSlot.BackupValues>
