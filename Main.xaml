@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugae="clr-namespace:UiPath.GSuite.Activities.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagf="clr-namespace:UiPath.GSuite.Activities.Gmail.Filters;assembly=UiPath.GSuite.Activities" xmlns:ugagm="clr-namespace:UiPath.GSuite.Activities.Gmail.Models;assembly=UiPath.GSuite.Activities" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugae="clr-namespace:UiPath.GSuite.Activities.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugagf="clr-namespace:UiPath.GSuite.Activities.Gmail.Filters;assembly=UiPath.GSuite.Activities" xmlns:ugagm="clr-namespace:UiPath.GSuite.Activities.Gmail.Models;assembly=UiPath.GSuite.Activities" xmlns:ugm="clr-namespace:UiPath.GSuite.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file." Name="in_OrchestratorQueueName" Type="InArgument(x:String)" />
     <x:Property sap2010:Annotation.AnnotationText="Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file." Name="in_OrchestratorQueueFolder" Type="InArgument(x:String)" />
@@ -163,7 +163,7 @@
       <AssemblyReference>System.Drawing.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID4}" sap2010:Annotation.AnnotationText="[InvoiceProcessing]&#xA;[Getting mails from gmail, downloading pdf attachment, extracting Invoice details and storing it to queue]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1213,808" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID5}" sap2010:Annotation.AnnotationText="[InvoiceProcessing]&#xA;[Getting mails from gmail, downloading pdf attachment, extracting Invoice details and storing it to queue]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1213,808" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -174,7 +174,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="229,110" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="229,110" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
         <Sequence sap:VirtualizedContainerService.HintSize="556,1819" sap2010:WorkflowViewState.IdRef="Sequence_96">
           <sap:WorkflowViewStateService.ViewState>
@@ -283,7 +283,14 @@
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log message  (Get transaction data error)" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                            <ui:LogMessage DisplayName="Log message  (Get transaction data error)" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
                             <Assign DisplayName="End Process (Could not get new transaction)" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="Assign_30">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="ugm:GmailMessage">[TransactionItem]</OutArgument>
@@ -334,9 +341,9 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="498,3092" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="240,192" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
-                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="452,2594" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="452,2845" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -369,6 +376,12 @@
                           <InArgument x:TypeArguments="x:Int32" x:Key="CurrentIndex" />
                           <InArgument x:TypeArguments="x:String" x:Key="in_Var_LocalPath">[Var_LocalPath]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                       <TryCatch DisplayName="Try Catch Set Transaction Status (Success)" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="TryCatch_10">
                         <sap:WorkflowViewStateService.ViewState>
@@ -571,7 +584,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,917" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1168" sap2010:WorkflowViewState.IdRef="Sequence_92">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -585,34 +598,85 @@
                               <InArgument x:TypeArguments="ui:BusinessRuleException">[exception]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{TransactionItem.FromAddress,TransactionItem.Subject,&quot;&quot;,&quot;Failed&quot;,BusinessException.Message}]" DataTable="[dt_StatusReport]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;BREMailBody&quot;).ToString().Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString()).Replace(&quot;{ExceptionMessage}&quot;,BusinessException.Message).Replace(&quot;{ExceptionSource}&quot;,BusinessException.Source).Replace(&quot;{TransactionItem}&quot;,String.Join(&quot;, &quot;, TransactionItem.AttachmentsNamesList)).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the mail.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,397" sap2010:WorkflowViewState.IdRef="SendEmailConnections_10" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[Config(&quot;BREMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{completed time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy hh:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
-                            <uga:SendEmailConnections.AttachmentsBackup>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{TransactionItem.FromAddress,TransactionItem.Subject,&quot;&quot;,&quot;Failed&quot;,BusinessException.Message}]" DataTable="[dt_StatusReport]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,225" sap2010:WorkflowViewState.IdRef="AddDataRow_4" />
+                          <uga:ReplyToEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" Attachments="{x:Null}" ConnectionAccountName="{x:Null}" AttachmentInputMode="UseExisting" AttachmentPaths="{x:Null}" AuthScopesInvalid="False" Bcc="{x:Null}" Body="[Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString()).Replace(&quot;{ExceptionMessage}&quot;,BusinessException.Message).Replace(&quot;{TransactionItem}&quot;,String.Join(&quot;, &quot;, TransactionItem.AttachmentsNamesList)).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the mail.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" Cc="{x:Null}" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" ContinueOnError="{x:Null}" DisplayName="Reply to Email" Email="[TransactionItem]" sap:VirtualizedContainerService.HintSize="416,345" sap2010:WorkflowViewState.IdRef="ReplyToEmailConnections_1" Importance="Normal" NewSubject="{x:Null}" ReplyToAll="True" SaveAsDraft="True" SingleAttachment="{x:Null}" To="{x:Null}" UseConnectionService="True">
+                            <uga:ReplyToEmailConnections.AttachmentsBackup>
                               <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                                 <usau:BackupSlot.BackupValues>
-                                  <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
-                                    <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
-                                  </scg:List>
-                                  <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
-                                    <x:Null />
-                                  </scg:List>
+                                  <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
                                 </usau:BackupSlot.BackupValues>
                               </usau:BackupSlot>
-                            </uga:SendEmailConnections.AttachmentsBackup>
-                            <uga:SendEmailConnections.InputTypeBackup>
-                              <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
-                                <usau:BackupSlot.BackupValues>
-                                  <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
-                                </usau:BackupSlot.BackupValues>
-                              </usau:BackupSlot>
-                            </uga:SendEmailConnections.InputTypeBackup>
+                            </uga:ReplyToEmailConnections.AttachmentsBackup>
+                          </uga:ReplyToEmailConnections>
+                          <uga:MoveEmailConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualFolderPath="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowseFolderPath="UiPath/Error" BrowserFolderLabelId="Label_9049738999243433350" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Move Email" Email="[TransactionItem]" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="416,242" sap2010:WorkflowViewState.IdRef="MoveEmailConnections_1" UseConnectionService="True">
+                            <uga:MoveEmailConnections.Folder>
+                              <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_9049738999243433350" BrowserFolderName="UiPath/Error" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
+                                <ugagm:FolderArgument.Backup>
+                                  <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID0" StoredValue="Browse">
+                                    <usau:BackupSlot.BackupValues>
+                                      <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                                        <InArgument x:TypeArguments="x:String">UiPath/Error</InArgument>
+                                        <x:String>Label_9049738999243433350</x:String>
+                                      </scg:List>
+                                      <scg:List x:TypeArguments="x:Object" x:Key="EnterPath" Capacity="1">
+                                        <x:Null />
+                                      </scg:List>
+                                    </usau:BackupSlot.BackupValues>
+                                  </usau:BackupSlot>
+                                </ugagm:FolderArgument.Backup>
+                              </ugagm:FolderArgument>
+                            </uga:MoveEmailConnections.Folder>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                          </uga:SendEmailConnections>
+                          </uga:MoveEmailConnections>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,544" sap2010:WorkflowViewState.IdRef="Sequence_102">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;BREMailBody&quot;).ToString().Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString()).Replace(&quot;{ExceptionMessage}&quot;,BusinessException.Message).Replace(&quot;{ExceptionSource}&quot;,BusinessException.Source).Replace(&quot;{TransactionItem}&quot;,String.Join(&quot;, &quot;, TransactionItem.AttachmentsNamesList)).Replace(&quot;{SuggestedAction}&quot;,&quot;Kindly recheck the mail.&quot;).Replace(&quot;{CurrentTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,484" sap2010:WorkflowViewState.IdRef="SendEmailConnections_10" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[Config(&quot;BREMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{completed time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy hh:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
+                                  <uga:SendEmailConnections.AttachmentsBackup>
+                                    <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                                      <usau:BackupSlot.BackupValues>
+                                        <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                                          <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+                                        </scg:List>
+                                        <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+                                          <x:Null />
+                                        </scg:List>
+                                      </usau:BackupSlot.BackupValues>
+                                    </usau:BackupSlot>
+                                  </uga:SendEmailConnections.AttachmentsBackup>
+                                  <uga:SendEmailConnections.InputTypeBackup>
+                                    <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                                      <usau:BackupSlot.BackupValues>
+                                        <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                                      </usau:BackupSlot.BackupValues>
+                                    </usau:BackupSlot>
+                                  </uga:SendEmailConnections.InputTypeBackup>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uga:SendEmailConnections>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:CommentOut>
                           <TryCatch DisplayName="Try Catch SetTransactionStatus (BRE)" sap:VirtualizedContainerService.HintSize="416,52" sap2010:WorkflowViewState.IdRef="TryCatch_14">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -718,9 +782,9 @@
                     <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SystemException IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
                   </Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="210,121" sap2010:WorkflowViewState.IdRef="State_2">
+                    <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="210,121" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="486,2798" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="558,4165" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -728,14 +792,14 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="484,2324" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="556,3691" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="522,179" sap2010:WorkflowViewState.IdRef="Assign_5">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                                 </Assign.To>
@@ -743,31 +807,31 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="450,106" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="522,2958" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="450,1230" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="520,2759" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="486,179" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="486,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
                                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="416,155" sap2010:WorkflowViewState.IdRef="If_10">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="486,155" sap2010:WorkflowViewState.IdRef="If_10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -802,7 +866,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="416,155" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="486,155" sap2010:WorkflowViewState.IdRef="If_12">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -837,7 +901,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="416,296" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="486,296" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -849,7 +913,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="416,195" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="486,204" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                       <ui:AddLogFields.Fields>
                                         <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                       </ui:AddLogFields.Fields>
@@ -859,10 +923,183 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:AddLogFields>
+                                    <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;StartMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{StartTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)).Replace(&quot;{Remark}&quot;,&quot;Bot run has started.&quot;)]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="SendEmailConnections_7" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[Config(&quot;StartMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{started time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
+                                      <uga:SendEmailConnections.Attachments>
+                                        <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+                                      </uga:SendEmailConnections.Attachments>
+                                      <uga:SendEmailConnections.AttachmentsBackup>
+                                        <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                                          <usau:BackupSlot.BackupValues>
+                                            <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                                          </usau:BackupSlot.BackupValues>
+                                        </usau:BackupSlot>
+                                      </uga:SendEmailConnections.AttachmentsBackup>
+                                      <uga:SendEmailConnections.InputTypeBackup>
+                                        <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                                          <usau:BackupSlot.BackupValues>
+                                            <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                                          </usau:BackupSlot.BackupValues>
+                                        </usau:BackupSlot>
+                                      </uga:SendEmailConnections.InputTypeBackup>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uga:SendEmailConnections>
+                                    <Assign DisplayName="Assign - Local Path" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[Var_LocalPath]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[Config("DesktopLocalPath").ToString+"\"+Config("logF_BusinessProcessName").ToString]</InArgument>
+                                      </Assign.Value>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </Assign>
+                                    <Sequence DisplayName="Sequence - Create Local Folder" sap:VirtualizedContainerService.HintSize="486,61" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:Boolean" Name="FolderExists" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Checking process folder exists or not&quot;]" />
+                                      <ui:FolderExistsX DisplayName="Folder Exists" Exists="[FolderExists]" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[Var_LocalPath]" />
+                                      <If Condition="[Not FolderExists]" DisplayName="If || Folder exists or not" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="If_15">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,488" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;Folder not exists so going to create new folder&quot;]" />
+                                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder - Process Name folder" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Var_LocalPath]" />
+                                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[Var_LocalPath+Config(&quot;AttachmentPath&quot;).ToString]" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,605" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Folder exists so deleting existing folder and creating new&quot;]" />
+                                            <ui:DeleteFolderX DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="DeleteFolderX_1" Path="[Var_LocalPath]" Recursive="True" />
+                                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder - Process Name folder" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Var_LocalPath]" />
+                                            <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Var_LocalPath+Config(&quot;AttachmentPath&quot;).ToString]" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Folder creation completed&quot;]" />
+                                    </Sequence>
+                                    <ui:BuildDataTable DataTable="[dt_StatusReport]" DisplayName="Build Data Table - Status Mail" sap:VirtualizedContainerService.HintSize="486,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;From&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Subject&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Attachment_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Remarks&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:BuildDataTable>
+                                    <Sequence DisplayName="Sequence || Getting Data" sap:VirtualizedContainerService.HintSize="486,1241" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Trace" Message="[&quot;Getting new emails&quot;]" />
+                                      <uga:GetEmailListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" CurrentIndex="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID1}" ManualEntryFolder="{x:Null}" QueryFilter="{x:Null}" AllLabels="W3siSWQiOiJDSEFUIiwiTmFtZSI6IkNIQVQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlNFTlQiLCJOYW1lIjoiU0VOVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiSU5CT1giLCJOYW1lIjoiSU5CT1giLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IklNUE9SVEFOVCIsIk5hbWUiOiJJTVBPUlRBTlQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlRSQVNIIiwiTmFtZSI6IlRSQVNIIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJEUkFGVCIsIk5hbWUiOiJEUkFGVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiU1BBTSIsIk5hbWUiOiJTUEFNIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9GT1JVTVMiLCJOYW1lIjoiQ0FURUdPUllfRk9SVU1TIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9VUERBVEVTIiwiTmFtZSI6IkNBVEVHT1JZX1VQREFURVMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiTmFtZSI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9QUk9NT1RJT05TIiwiTmFtZSI6IkNBVEVHT1JZX1BST01PVElPTlMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1NPQ0lBTCIsIk5hbWUiOiJDQVRFR09SWV9TT0NJQUwiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IllFTExPV19TVEFSIiwiTmFtZSI6IllFTExPV19TVEFSIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJTVEFSUkVEIiwiTmFtZSI6IlNUQVJSRUQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlVOUkVBRCIsIk5hbWUiOiJVTlJFQUQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkxhYmVsXzEiLCJOYW1lIjoiU01TIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjEyNzI5NzU2NDc4MTIxOTc1MSIsIk5hbWUiOiJVaVBhdGgiLCJUeXBlIjoidXNlciJ9XQ==" AuthScopesInvalid="False" BrowserFolder="UiPath" BrowserFolderLabelId="Label_6127297564781219751" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Get Email List" EmailList="[TransactionData]" FilterSelectionMode="ConditionBuilder" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="452,242" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" ImportantOnly="False" IncludeSubfolders="False" MarkAsRead="False" MaxResults="[Cint(Config(&quot;MailCount&quot;).ToString)]" StarredOnly="False" UnreadOnly="False" UseConnectionService="True" WithAttachmentsOnly="False">
+                                        <uga:GetEmailListConnections.Filter>
+                                          <ugagf:MailFilterCollection LogicalOperator="Or">
+                                            <ugagf:MailFilterCollection.Filters>
+                                              <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Values="{x:Null}" CollectionFilterOperator="In" Criteria="Subject" DateOperator="NewerThan" StringOperator="Contains" Value="Invoice" />
+                                              <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Values="{x:Null}" CollectionFilterOperator="In" Criteria="Subject" DateOperator="NewerThan" StringOperator="Contains" Value="invoice" />
+                                              <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Values="{x:Null}" CollectionFilterOperator="In" Criteria="Subject" DateOperator="NewerThan" StringOperator="Contains" Value="INVOICE" />
+                                            </ugagf:MailFilterCollection.Filters>
+                                          </ugagf:MailFilterCollection>
+                                        </uga:GetEmailListConnections.Filter>
+                                        <uga:GetEmailListConnections.FilterSelectionBackup>
+                                          <usau:BackupSlot x:TypeArguments="ugae:FilterMode" StoredValue="ConditionBuilder">
+                                            <usau:BackupSlot.BackupValues>
+                                              <scg:Dictionary x:TypeArguments="ugae:FilterMode, scg:List(x:Object)" />
+                                            </usau:BackupSlot.BackupValues>
+                                          </usau:BackupSlot>
+                                        </uga:GetEmailListConnections.FilterSelectionBackup>
+                                        <uga:GetEmailListConnections.Folder>
+                                          <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_6127297564781219751" BrowserFolderName="UiPath" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
+                                            <ugagm:FolderArgument.Backup>
+                                              <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID1" StoredValue="Browse">
+                                                <usau:BackupSlot.BackupValues>
+                                                  <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
+                                                    <InArgument x:TypeArguments="x:String">UiPath</InArgument>
+                                                    <x:String>Label_6127297564781219751</x:String>
+                                                  </scg:List>
+                                                  <scg:List x:TypeArguments="x:Object" x:Key="EnterPath" Capacity="1">
+                                                    <x:Null />
+                                                  </scg:List>
+                                                </usau:BackupSlot.BackupValues>
+                                              </usau:BackupSlot>
+                                            </ugagm:FolderArgument.Backup>
+                                          </ugagm:FolderArgument>
+                                        </uga:GetEmailListConnections.Folder>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uga:GetEmailListConnections>
+                                      <If Condition="[TransactionData.Count &gt; 0]" DisplayName="If || Emails Present or not" sap:VirtualizedContainerService.HintSize="452,559" sap2010:WorkflowViewState.IdRef="If_17">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="Info" Message="[&quot;Mail count is: &quot; + TransactionData.Count.ToString]" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="Sequence_88">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Throw Exception="[New BusinessRuleException(Config(&quot;BRENoNewEmail&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,170" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Info" Message="[&quot;Email extraction completed&quot;]" />
+                                    </Sequence>
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="520,25" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -872,7 +1109,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="450,171" sap2010:WorkflowViewState.IdRef="If_13">
+                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="522,171" sap2010:WorkflowViewState.IdRef="If_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -901,166 +1138,12 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;StartMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{StartTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)).Replace(&quot;{Remark}&quot;,&quot;Bot run has started.&quot;)]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="450,397" sap2010:WorkflowViewState.IdRef="SendEmailConnections_7" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[Config(&quot;StartMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{started time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
-                                <uga:SendEmailConnections.Attachments>
-                                  <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
-                                </uga:SendEmailConnections.Attachments>
-                                <uga:SendEmailConnections.AttachmentsBackup>
-                                  <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
-                                    <usau:BackupSlot.BackupValues>
-                                      <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
-                                    </usau:BackupSlot.BackupValues>
-                                  </usau:BackupSlot>
-                                </uga:SendEmailConnections.AttachmentsBackup>
-                                <uga:SendEmailConnections.InputTypeBackup>
-                                  <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
-                                    <usau:BackupSlot.BackupValues>
-                                      <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
-                                    </usau:BackupSlot.BackupValues>
-                                  </usau:BackupSlot>
-                                </uga:SendEmailConnections.InputTypeBackup>
-                              </uga:SendEmailConnections>
-                              <Assign DisplayName="Assign - Local Path" sap:VirtualizedContainerService.HintSize="450,179" sap2010:WorkflowViewState.IdRef="Assign_29">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:String">[Var_LocalPath]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">[Config("DesktopLocalPath").ToString+"\"+Config("logF_BusinessProcessName").ToString]</InArgument>
-                                </Assign.Value>
-                              </Assign>
-                              <Sequence DisplayName="Sequence - Create Local Folder" sap:VirtualizedContainerService.HintSize="450,61" sap2010:WorkflowViewState.IdRef="Sequence_58">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:Boolean" Name="FolderExists" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,179" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Checking process folder exists or not&quot;]" />
-                                <ui:FolderExistsX DisplayName="Folder Exists" Exists="[FolderExists]" sap:VirtualizedContainerService.HintSize="452,171" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[Var_LocalPath]" />
-                                <If Condition="[Not FolderExists]" DisplayName="If || Folder exists or not" sap:VirtualizedContainerService.HintSize="452,1236" sap2010:WorkflowViewState.IdRef="If_15">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,488" sap2010:WorkflowViewState.IdRef="Sequence_59">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;Folder not exists so going to create new folder&quot;]" />
-                                      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder - Process Name folder" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Var_LocalPath]" />
-                                      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[Var_LocalPath+Config(&quot;AttachmentPath&quot;).ToString]" />
-                                    </Sequence>
-                                  </If.Then>
-                                  <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,605" sap2010:WorkflowViewState.IdRef="Sequence_60">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Folder exists so deleting existing folder and creating new&quot;]" />
-                                      <ui:DeleteFolderX DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="416,117" sap2010:WorkflowViewState.IdRef="DeleteFolderX_1" Path="[Var_LocalPath]" Recursive="True" />
-                                      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder - Process Name folder" sap:VirtualizedContainerService.HintSize="416,127" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Var_LocalPath]" />
-                                      <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Var_LocalPath+Config(&quot;AttachmentPath&quot;).ToString]" />
-                                    </Sequence>
-                                  </If.Else>
-                                </If>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,170" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Folder creation completed&quot;]" />
-                              </Sequence>
-                              <ui:BuildDataTable DataTable="[dt_StatusReport]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="450,96" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;From&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Subject&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Attachment_x0020_Name&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Remarks&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="450,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="522,186" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
-                              <Sequence DisplayName="Sequence || Getting Data" sap:VirtualizedContainerService.HintSize="450,752" sap2010:WorkflowViewState.IdRef="Sequence_86">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Trace" Message="[&quot;Getting new emails&quot;]" />
-                                <uga:GetEmailListConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" CurrentIndex="{x:Null}" FolderIdBackup="{x:Reference __ReferenceID0}" ManualEntryFolder="{x:Null}" QueryFilter="{x:Null}" AllLabels="W3siSWQiOiJDSEFUIiwiTmFtZSI6IkNIQVQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlNFTlQiLCJOYW1lIjoiU0VOVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiSU5CT1giLCJOYW1lIjoiSU5CT1giLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IklNUE9SVEFOVCIsIk5hbWUiOiJJTVBPUlRBTlQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlRSQVNIIiwiTmFtZSI6IlRSQVNIIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJEUkFGVCIsIk5hbWUiOiJEUkFGVCIsIlR5cGUiOiJzeXN0ZW0ifSx7IklkIjoiU1BBTSIsIk5hbWUiOiJTUEFNIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9GT1JVTVMiLCJOYW1lIjoiQ0FURUdPUllfRk9SVU1TIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9VUERBVEVTIiwiTmFtZSI6IkNBVEVHT1JZX1VQREFURVMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiTmFtZSI6IkNBVEVHT1JZX1BFUlNPTkFMIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJDQVRFR09SWV9QUk9NT1RJT05TIiwiTmFtZSI6IkNBVEVHT1JZX1BST01PVElPTlMiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkNBVEVHT1JZX1NPQ0lBTCIsIk5hbWUiOiJDQVRFR09SWV9TT0NJQUwiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IllFTExPV19TVEFSIiwiTmFtZSI6IllFTExPV19TVEFSIiwiVHlwZSI6InN5c3RlbSJ9LHsiSWQiOiJTVEFSUkVEIiwiTmFtZSI6IlNUQVJSRUQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IlVOUkVBRCIsIk5hbWUiOiJVTlJFQUQiLCJUeXBlIjoic3lzdGVtIn0seyJJZCI6IkxhYmVsXzEiLCJOYW1lIjoiU01TIiwiVHlwZSI6InVzZXIifSx7IklkIjoiTGFiZWxfNjEyNzI5NzU2NDc4MTIxOTc1MSIsIk5hbWUiOiJVaVBhdGgiLCJUeXBlIjoidXNlciJ9XQ==" AuthScopesInvalid="False" BrowserFolder="UiPath" BrowserFolderLabelId="Label_6127297564781219751" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Get Email List" EmailList="[TransactionData]" FilterSelectionMode="ConditionBuilder" FolderInputSelectionMode="Browse" sap:VirtualizedContainerService.HintSize="416,242" sap2010:WorkflowViewState.IdRef="GetEmailListConnections_1" ImportantOnly="False" IncludeSubfolders="False" MarkAsRead="False" MaxResults="[Cint(Config(&quot;MailCount&quot;).ToString)]" StarredOnly="False" UnreadOnly="False" UseConnectionService="True" WithAttachmentsOnly="False">
-                                  <uga:GetEmailListConnections.Filter>
-                                    <ugagf:MailFilterCollection LogicalOperator="Or">
-                                      <ugagf:MailFilterCollection.Filters>
-                                        <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Values="{x:Null}" CollectionFilterOperator="In" Criteria="Subject" DateOperator="NewerThan" StringOperator="Contains" Value="Invoice" />
-                                        <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Values="{x:Null}" CollectionFilterOperator="In" Criteria="Subject" DateOperator="NewerThan" StringOperator="Contains" Value="invoice" />
-                                        <ugagf:MailFilterElement DateEqualsFilter="{x:Null}" Values="{x:Null}" CollectionFilterOperator="In" Criteria="Subject" DateOperator="NewerThan" StringOperator="Contains" Value="INVOICE" />
-                                      </ugagf:MailFilterCollection.Filters>
-                                    </ugagf:MailFilterCollection>
-                                  </uga:GetEmailListConnections.Filter>
-                                  <uga:GetEmailListConnections.FilterSelectionBackup>
-                                    <usau:BackupSlot x:TypeArguments="ugae:FilterMode" StoredValue="ConditionBuilder">
-                                      <usau:BackupSlot.BackupValues>
-                                        <scg:Dictionary x:TypeArguments="ugae:FilterMode, scg:List(x:Object)" />
-                                      </usau:BackupSlot.BackupValues>
-                                    </usau:BackupSlot>
-                                  </uga:GetEmailListConnections.FilterSelectionBackup>
-                                  <uga:GetEmailListConnections.Folder>
-                                    <ugagm:FolderArgument ConnectionDescriptor="{x:Null}" ManualEntryFolderName="{x:Null}" BrowserFolderId="Label_6127297564781219751" BrowserFolderName="UiPath" ConnectionKey="09f539a3-4106-4212-bdd0-d5b800507e65" InputMode="Browse">
-                                      <ugagm:FolderArgument.Backup>
-                                        <usau:BackupSlot x:TypeArguments="ugage:FolderInputMode" x:Name="__ReferenceID0" StoredValue="Browse">
-                                          <usau:BackupSlot.BackupValues>
-                                            <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="2">
-                                              <InArgument x:TypeArguments="x:String">UiPath</InArgument>
-                                              <x:String>Label_6127297564781219751</x:String>
-                                            </scg:List>
-                                            <scg:List x:TypeArguments="x:Object" x:Key="EnterPath" Capacity="1">
-                                              <x:Null />
-                                            </scg:List>
-                                          </usau:BackupSlot.BackupValues>
-                                        </usau:BackupSlot>
-                                      </ugagm:FolderArgument.Backup>
-                                    </ugagm:FolderArgument>
-                                  </uga:GetEmailListConnections.Folder>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </uga:GetEmailListConnections>
-                                <If Condition="[TransactionData.Count &gt; 0]" DisplayName="If || Emails Present or not" sap:VirtualizedContainerService.HintSize="416,61" sap2010:WorkflowViewState.IdRef="If_17">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <If.Then>
-                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,234" sap2010:WorkflowViewState.IdRef="Sequence_87">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_69" Level="Info" Message="[&quot;Mail count is: &quot; + TransactionData.Count.ToString]" />
-                                    </Sequence>
-                                  </If.Then>
-                                  <If.Else>
-                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="Sequence_88">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <Throw Exception="[New BusinessRuleException(Config(&quot;BRENoNewEmail&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="416,118" sap2010:WorkflowViewState.IdRef="Throw_3" />
-                                    </Sequence>
-                                  </If.Else>
-                                </If>
-                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,170" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Info" Message="[&quot;Email extraction completed&quot;]" />
-                              </Sequence>
-                              <p1:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="450,133" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[Var_Taxonomy]" />
+                              <p1:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="486,133" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[Var_Taxonomy]" />
                             </Sequence>
                           </TryCatch.Try>
                           <TryCatch.Catches>
@@ -1069,13 +1152,13 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,234" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,234" sap2010:WorkflowViewState.IdRef="Sequence_82">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,170" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Warn" Message="[exception.Message]" />
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,170" sap2010:WorkflowViewState.IdRef="LogMessage_66" Level="Warn" Message="[exception.Message]" />
                                 </Sequence>
                               </ActivityAction>
                             </Catch>
@@ -1112,7 +1195,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <x:Reference>__ReferenceID1</x:Reference>
+                            <x:Reference>__ReferenceID2</x:Reference>
                           </Transition.To>
                           <Transition.Action>
                             <ui:Comment DisplayName="Comment (default transition)" sap:VirtualizedContainerService.HintSize="412,76" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Default transition is picked up if there are no errors during initialization" />
@@ -1130,9 +1213,9 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="200,110" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="200,110" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="522,2431" sap2010:WorkflowViewState.IdRef="TryCatch_13">
+                                <TryCatch DisplayName="Try to close all aplications" sap:VirtualizedContainerService.HintSize="522,2889" sap2010:WorkflowViewState.IdRef="TryCatch_13">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1140,13 +1223,13 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <TryCatch.Try>
-                                    <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="520,1749" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                    <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="520,2207" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <If Condition="[SystemException Is Nothing And BusinessException Is Nothing]" DisplayName="If || SystemException And BusinessException Is Nothing" sap:VirtualizedContainerService.HintSize="486,1508" sap2010:WorkflowViewState.IdRef="If_18">
+                                      <If Condition="[SystemException Is Nothing And BusinessException Is Nothing]" DisplayName="If || SystemException And BusinessException Is Nothing" sap:VirtualizedContainerService.HintSize="486,1966" sap2010:WorkflowViewState.IdRef="If_18">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1161,9 +1244,6 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <Sequence DisplayName="Sequence || Create and send Status Report" sap:VirtualizedContainerService.HintSize="450,1207" sap2010:WorkflowViewState.IdRef="Sequence_83">
-                                              <Sequence.Variables>
-                                                <Variable x:TypeArguments="x:Boolean" Name="StatusFileExists" />
-                                              </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1228,12 +1308,37 @@
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="484,552" sap2010:WorkflowViewState.IdRef="Sequence_90">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
+                                            <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;EndMailBody&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{EndTimeStamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)).Replace(&quot;{Remark}&quot;,&quot;Bot run has ended.&quot;)]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send End Email" sap:VirtualizedContainerService.HintSize="450,488" sap2010:WorkflowViewState.IdRef="SendEmailConnections_11" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[Config(&quot;EndMailSubject&quot;).ToString.Replace(&quot;{ProcessName}&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;{completed time stamp}&quot;,DateTime.Now.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
+                                              <uga:SendEmailConnections.Attachments>
+                                                <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+                                              </uga:SendEmailConnections.Attachments>
+                                              <uga:SendEmailConnections.AttachmentsBackup>
+                                                <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                                                  <usau:BackupSlot.BackupValues>
+                                                    <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                                                  </usau:BackupSlot.BackupValues>
+                                                </usau:BackupSlot>
+                                              </uga:SendEmailConnections.AttachmentsBackup>
+                                              <uga:SendEmailConnections.InputTypeBackup>
+                                                <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                                                  <usau:BackupSlot.BackupValues>
+                                                    <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                                                  </usau:BackupSlot.BackupValues>
+                                                </usau:BackupSlot>
+                                              </uga:SendEmailConnections.InputTypeBackup>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uga:SendEmailConnections>
                                           </Sequence>
                                         </If.Else>
                                       </If>
@@ -1346,7 +1451,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:LogMessage DisplayName="Log Message (no mails)" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_44" Level="Warn" Message="[&quot;Business exception at initialization: &quot; + BusinessException.Message]" />
-                              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;ProcessName&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;BusinessException&quot;,BusinessException.Message)]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,484" sap2010:WorkflowViewState.IdRef="SendEmailConnections_5" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[String.Format(Config(&quot;BREMailSubject&quot;).ToString,Config(&quot;logF_BusinessProcessName&quot;).ToString,Now.ToString(&quot;hh:mm tt&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
+                              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[Config(&quot;BREMailBody&quot;).ToString.Replace(&quot;ProcessName&quot;,Config(&quot;logF_BusinessProcessName&quot;).ToString).Replace(&quot;BusinessException&quot;,BusinessException.Message)]" ConnectionId="09f539a3-4106-4212-bdd0-d5b800507e65" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,484" sap2010:WorkflowViewState.IdRef="SendEmailConnections_5" Importance="Normal" InputType="HTML" SaveAsDraft="True" Subject="[String.Format(Config(&quot;BREMailSubject&quot;).ToString,Config(&quot;logF_BusinessProcessName&quot;).ToString,Now.ToString(&quot;HH:mm:ss&quot;))]" To="[{String.Join(&quot;,&quot;,Config(&quot;EmailList&quot;).ToString.Split(New String(){&quot;;&quot;},StringSplitOptions.None))}]" UseConnectionService="True">
                                 <uga:SendEmailConnections.AttachmentsBackup>
                                   <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
                                     <usau:BackupSlot.BackupValues>
@@ -1389,7 +1494,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <x:Reference>__ReferenceID2</x:Reference>
+                            <x:Reference>__ReferenceID3</x:Reference>
                           </Transition.To>
                           <Transition.Action>
                             <ui:LogMessage DisplayName="Log Message (initialization failure)" sap:VirtualizedContainerService.HintSize="347,143" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Error" Message="[&quot;System exception at initialization: &quot; + SystemException.Message + &quot; at Source: &quot; + SystemException.Source]" />
@@ -1411,7 +1516,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <x:Reference>__ReferenceID1</x:Reference>
+                    <x:Reference>__ReferenceID2</x:Reference>
                   </Transition.To>
                   <Transition.Action>
                     <Assign sap:VirtualizedContainerService.HintSize="347,143" sap2010:WorkflowViewState.IdRef="Assign_35">
@@ -1438,7 +1543,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <x:Reference>__ReferenceID1</x:Reference>
+                    <x:Reference>__ReferenceID2</x:Reference>
                   </Transition.To>
                   <Transition.Condition>[SystemException Is Nothing And BusinessException is Nothing]</Transition.Condition>
                 </Transition>
@@ -1463,7 +1568,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <x:Reference>__ReferenceID2</x:Reference>
+            <x:Reference>__ReferenceID3</x:Reference>
           </Transition.To>
           <Transition.Action>
             <ui:LogMessage DisplayName="Log message (No more transations available)" sap:VirtualizedContainerService.HintSize="347,143" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Process finished due to no more transaction data&quot;]" />
@@ -1472,9 +1577,9 @@
         </Transition>
       </State.Transitions>
     </State>
-    <x:Reference>__ReferenceID3</x:Reference>
-    <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
     <StateMachine.Variables>
       <Variable x:TypeArguments="ugm:GmailMessage" sap2010:Annotation.AnnotationText="Transaction item to be processed. The type of this variable can be changed to match the transaction type in the process. For example, when processing data from a spreadsheet that is read into a DataTable, this type can be changed to DataRow. " Name="TransactionItem" />
       <Variable x:TypeArguments="s:Exception" sap2010:Annotation.AnnotationText="Used during transitions between states to represent exceptions other than business exceptions." Name="SystemException" />
@@ -1489,8 +1594,6 @@
       <Variable x:TypeArguments="x:String" Name="Var_LocalPath" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_StatusReport" />
       <Variable x:TypeArguments="p:DocumentTaxonomy" Name="Var_Taxonomy" />
-      <Variable x:TypeArguments="p2:Document" Name="Var_DOM" />
-      <Variable x:TypeArguments="x:String" Name="Var_DigitalText" />
       <Variable x:TypeArguments="s:String[]" Name="Var_Doc_FilePath" />
       <Variable x:TypeArguments="ui:BusinessRuleException" sap2010:Annotation.AnnotationText="Used during transitions between states and represents a situation that does not conform to the rules of the process being automated." Name="BusinessException" />
     </StateMachine.Variables>
